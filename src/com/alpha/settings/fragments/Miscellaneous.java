@@ -75,11 +75,9 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
             prefScreen.removePreference(mPocketJudge);
         }
 
-        Action defaultThreeFingersSwipeAction = Action.fromIntSafe(res.getInteger(
-            org.lineageos.platform.internal.R.integer.config_threeFingersSwipeBehavior));
         Action threeFingersSwipeAction = Action.fromSettings(getContentResolver(),
-            LineageSettings.System.KEY_THREE_FINGERS_SWIPE_ACTION,
-            defaultThreeFingersSwipeAction);
+                LineageSettings.System.KEY_THREE_FINGERS_SWIPE_ACTION,
+                Action.NOTHING);
         mThreeFingersSwipeAction = initList(KEY_THREE_FINGERS_SWIPE, threeFingersSwipeAction);
         
 
