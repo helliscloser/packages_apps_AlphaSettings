@@ -23,8 +23,7 @@
         android:key="sound_engine_enabled"
         android:title="@string/ad_sound_engine_title"
         android:summary="@string/ad_sound_engine_summary"
-        android:defaultValue="false"
-        app:position="solo" />
+        android:defaultValue="false" />
 
     <com.alpha.settings.preferences.SystemSettingSeekBarPreference
         android:dependency="sound_engine_enabled"
@@ -34,8 +33,7 @@
         android:max="100"
         settings:min="0"
         settings:interval="1"
-        settings:units="%"
-        app:position="top"/>
+        settings:units="%" />
 
     <com.alpha.settings.preferences.SystemSettingSeekBarPreference
         android:dependency="sound_engine_enabled"
@@ -55,7 +53,6 @@
         android:max="100"
         settings:min="0"
         settings:interval="1"
-        settings:units="%"
-        app:position="bottom"/>
+        settings:units="%" />
 
 </PreferenceScreen>
