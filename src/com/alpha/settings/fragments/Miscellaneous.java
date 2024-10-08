@@ -71,9 +71,9 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
         mPocketJudge = (Preference) prefScreen.findPreference(POCKET_JUDGE);
         boolean mPocketJudgeSupported = res.getBoolean(
                 com.android.internal.R.bool.config_pocketModeSupported);
-        if (!mPocketJudgeSupported && mPocketJudge != null) {
+        if (!mPocketJudgeSupported && mPocketJudge != null) 
             prefScreen.removePreference(mPocketJudge);
-        }    
+            
         Action defaultThreeFingersSwipeAction = Action.fromIntSafe(res.getInteger(
                 org.lineageos.platform.internal.R.integer.config_threeFingersSwipeBehavior));
         Action threeFingersSwipeAction = Action.fromSettings(getContentResolver(),
