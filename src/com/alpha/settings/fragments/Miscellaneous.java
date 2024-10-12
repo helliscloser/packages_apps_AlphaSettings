@@ -81,7 +81,7 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
             LineageSettings.System.KEY_THREE_FINGERS_SWIPE_ACTION,
             defaultThreeFingersSwipeAction);
         mThreeFingersSwipeAction = initList(KEY_THREE_FINGERS_SWIPE, threeFingersSwipeAction);
-        }
+        
 
 	    final String displayCutout =
            res.getString(com.android.internal.R.string.config_mainBuiltInDisplayCutout);
@@ -117,7 +117,7 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
         int index = pref.findIndexOfValue(value);
         pref.setSummary(pref.getEntries()[index]);
         LineageSettings.System.putIntForUser(getContentResolver(), setting, Integer.valueOf(value), UserHandle.USER_CURRENT);
-
+  }
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mThreeFingersSwipeAction) {
